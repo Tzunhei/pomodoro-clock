@@ -1,0 +1,10 @@
+.up-down-btn-container {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2em;
+}
+
+.nb-config {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 2em;
+}

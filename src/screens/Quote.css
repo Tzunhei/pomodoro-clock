@@ -1,0 +1,23 @@
+.quote-container {
+  font-size: 1.2em;
+}
+
+.quote-author {
+  font-size: 0.6em;
+  font-style: italic;
+  text-align: end;
+}
+
+@media only screen and (min-width: 768px) {
+  .quote-container {
+    flex-basis: 50%;
+    font-size: 2em;
+  }
+
+  .quote-author {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+}
