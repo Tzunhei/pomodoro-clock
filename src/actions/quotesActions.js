@@ -5,13 +5,16 @@ import {
 } from "../constants";
 
 import axios from "axios";
+import { generateRandomIndex } from "../utils";
 
 export const fetchQuotes = () => {
   return (dispatch, getState) => {
     dispatch(addQuotesStarted());
     axios
       .get("https://type.fit/api/quotes")
-      .then(res => dispatch(addQuotesSuccess(res.data)))
+      .then(res =>
+        dispatch(addQuotesSuccess(res.data[generateRandomIndex(res.data)]))
+      )
       .catch(error => dispatch(addQuotesFailure(error)));
   };
 };
