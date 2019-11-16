@@ -12,7 +12,9 @@ class Quote extends React.Component {
     return (
       <>
         <p className="quote-text">" {randomQuote.text} "</p>
-        <footer className="quote-author">- {randomQuote.author}</footer>
+        <footer className="quote-author">
+          - {randomQuote.author || "Unknown"}
+        </footer>
       </>
     );
   };
@@ -42,7 +44,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  { fetchQuotes }
-)(Quote);
+export default connect(mapStateToProps, { fetchQuotes })(Quote);
